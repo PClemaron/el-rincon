@@ -1,40 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const requestedLanguage = params.get("lang");
 
-  <title>Guest Information &amp; Apartment Guide | El Rincon</title>
+  const browserLanguage = (
+    navigator.language ||
+    navigator.userLanguage ||
+    ""
+  ).toLowerCase();
 
-  <script>
-    const language = (
-      navigator.language ||
-      navigator.userLanguage ||
-      ""
-    ).toLowerCase();
+  const language = requestedLanguage
+    ? requestedLanguage.toLowerCase()
+    : browserLanguage;
 
-    if (language.startsWith("es")) {
-      window.location.replace("es/");
-    } else if (language.startsWith("fr")) {
-      window.location.replace("fr/");
-    } else {
-      window.location.replace("en/");
-    }
-  </script>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      color: #222;
-      text-align: center;
-    }
-
-    h1 {
-      margin-bottom: 10px;
+  if (language.startsWith("es")) {
+    window.location.replace("es/");
+  } else if (language.startsWith("fr")) {
+    window.location.replace("fr/");
+  } else {
+    window.location.replace("en/");
+  }
+</script>      margin-bottom: 10px;
     }
 
     .subtitle {
