@@ -3,16 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>El Rincon | Vera Playa</title>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const requestedLanguage = params.get("lang");
+
+    const browserLanguage = (
+      navigator.language ||
+      navigator.userLanguage ||
+      ""
+    ).toLowerCase();
+
+    const language = requestedLanguage
+      ? requestedLanguage.toLowerCase()
+      : browserLanguage;
+
+    if (language.startsWith("es")) {
+      window.location.replace("es/");
+    } else if (language.startsWith("fr")) {
+      window.location.replace("fr/");
+    } else {
+      window.location.replace("en/");
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      color: #222;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .languages {
+      margin-top: 25px;
+      font-size: 1.1rem;
+    }
+
+    .languages a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .languages a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
 
-  <h1>El Rincon</h1>
-  <p>Vera Playa, Almería, Spain</p>
+  <h1>EL RINCON</h1>
+
+  <p class="subtitle">
+    Vera Playa, Almería, Spain
+  </p>
 
   <p>
-    <a href="terms/">Rental Terms &amp; Conditions</a>
+    Please choose your language /
+    Por favor, elija su idioma /
+    Veuillez choisir votre langue :
   </p>
+
+  <div class="languages">
+    <a href="en/">English</a> |
+    <a href="es/">Español</a> |
+    <a href="fr/">Français</a>
+  </div>
 
 </body>
 </html>
