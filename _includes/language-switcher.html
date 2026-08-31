@@ -1,0 +1,31 @@
+{% if page.section == "info" %}
+  {% assign en_path = "/info/en/" %}
+  {% assign es_path = "/info/es/" %}
+  {% assign fr_path = "/info/fr/" %}
+{% elsif page.section == "terms" %}
+  {% assign en_path = "/terms/en/" %}
+  {% assign es_path = "/terms/es/" %}
+  {% assign fr_path = "/terms/fr/" %}
+{% else %}
+  {% assign en_path = "/en/" %}
+  {% assign es_path = "/es/" %}
+  {% assign fr_path = "/fr/" %}
+{% endif %}
+
+{% if page.lang == "en" %}
+  <strong>EN</strong>
+{% else %}
+  <a href="{{ en_path | relative_url }}">EN</a>
+{% endif %}
+|
+{% if page.lang == "es" %}
+  <strong>ES</strong>
+{% else %}
+  <a href="{{ es_path | relative_url }}">ES</a>
+{% endif %}
+|
+{% if page.lang == "fr" %}
+  <strong>FR</strong>
+{% else %}
+  <a href="{{ fr_path | relative_url }}">FR</a>
+{% endif %}
