@@ -3,37 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rental Terms & Conditions | El Rincon</title>
+  <title>El Rincon | Terms & House Rules</title>
+
+  <script>
+    const language = navigator.language || navigator.userLanguage;
+
+    if (language && language.toLowerCase().startsWith("es")) {
+      window.location.replace("es/");
+    } else {
+      window.location.replace("en/");
+    }
+  </script>
 </head>
+
 <body>
+  <h1>El Rincon</h1>
 
-  <p><a href="../">← El Rincon</a></p>
-
-  <h1>Rental Terms &amp; Conditions</h1>
-
-  <p><strong>El Rincon, Vera Playa, Almería, Spain</strong></p>
+  <p>Please choose your language:</p>
 
   <p>
-    <strong>Version:</strong> 1.0<br>
-    <strong>Effective date:</strong> [DATE]
+    <a href="en/">English</a> |
+    <a href="es/">Español</a>
   </p>
-
-  <hr>
-
-  <h2>1. Introduction</h2>
-  <p>Your terms will go here.</p>
-
-  <h2>2. Booking</h2>
-  <p>Your booking terms will go here.</p>
-
-  <h2>3. Payment</h2>
-  <p>Your payment terms will go here.</p>
-
-  <h2>4. Cancellation</h2>
-  <p>Your cancellation terms will go here.</p>
-
-  <h2>5. Property Rules</h2>
-  <p>Your property rules will go here.</p>
-
 </body>
 </html>
