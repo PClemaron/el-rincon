@@ -1,0 +1,13 @@
+{% assign home_path = "/" | append: page.lang | append: "/" %}
+
+<div class="topbar">
+
+  <div class="property-name">
+    <a href="{{ home_path | relative_url }}">EL RINCON</a>
+  </div>
+
+  <div class="language">
+    {% include language-switcher.html %}
+  </div>
+
+</div>
