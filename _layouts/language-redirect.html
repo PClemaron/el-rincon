@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ page.title }}</title>
+
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const requestedLanguage = params.get("lang");
+
+    const browserLanguage = (
+      navigator.language ||
+      navigator.userLanguage ||
+      ""
+    ).toLowerCase();
+
+    const language = requestedLanguage
+      ? requestedLanguage.toLowerCase()
+      : browserLanguage;
+
+    if (language.startsWith("es")) {
+      window.location.replace("{{ page.es_path | relative_url }}");
+    } else if (language.startsWith("fr")) {
+      window.location.replace("{{ page.fr_path | relative_url }}");
+    } else {
+      window.location.replace("{{ page.en_path | relative_url }}");
+    }
+  </script>
+</head>
+
+<body>
+
+  <div class="redirect-page">
+
+    <h1>EL RINCON</h1>
+
+    <p class="subtitle">
+      {{ page.subtitle }}
+    </p>
+
+    <p>
+      Please choose your language /
+      Por favor, elija su idioma /
+      Veuillez choisir votre langue :
+    </p>
+
+    <div class="languages">
+      <a href="{{ page.en_path | relative_url }}">English</a> |
+      <a href="{{ page.es_path | relative_url }}">Español</a> |
+      <a href="{{ page.fr_path | relative_url }}">Français</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
