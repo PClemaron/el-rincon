@@ -1,22 +1,8 @@
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const requestedLanguage = params.get("lang");
-
-  const browserLanguage = (
-    navigator.language ||
-    navigator.userLanguage ||
-    ""
-  ).toLowerCase();
-
-  const language = requestedLanguage
-    ? requestedLanguage.toLowerCase()
-    : browserLanguage;
-
-  if (language.startsWith("es")) {
-    window.location.replace("es/");
-  } else if (language.startsWith("fr")) {
-    window.location.replace("fr/");
-  } else {
-    window.location.replace("en/");
-  }
-</script>
+---
+layout: language-redirect
+title: "Rental Terms &amp; House Rules | El Rincon"
+subtitle: "Rental Terms &amp; House Rules"
+en_path: "/terms/en/"
+es_path: "/terms/es/"
+fr_path: "/terms/fr/"
+---
