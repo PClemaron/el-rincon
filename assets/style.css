@@ -195,3 +195,19 @@ footer {
   color: #222;
   text-decoration: underline;
 }
+
+
+/* Homepage language selector */
+
+.home-language a,
+.home-language a:link,
+.home-language a:visited {
+  color: #555 !important;
+  text-decoration: none !important;
+}
+
+.home-language a:hover,
+.home-language a:focus {
+  color: #222 !important;
+  text-decoration: underline !important;
+}
