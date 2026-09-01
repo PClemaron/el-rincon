@@ -40,12 +40,16 @@ header {
   font-size: 0.95rem;
 }
 
-.language a {
+.language a,
+.language a:link,
+.language a:visited {
   color: #555;
   text-decoration: none;
 }
 
-.language a:hover {
+.language a:hover,
+.language a:focus {
+  color: #222;
   text-decoration: underline;
 }
 
