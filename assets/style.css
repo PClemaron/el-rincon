@@ -7,6 +7,9 @@ body {
   color: #222;
 }
 
+
+/* Shared content pages */
+
 header {
   border-bottom: 1px solid #ddd;
   margin-bottom: 35px;
@@ -26,12 +29,15 @@ header {
   letter-spacing: 0.05em;
 }
 
-.property-name a {
+.property-name a,
+.property-name a:link,
+.property-name a:visited {
   color: inherit;
   text-decoration: none;
 }
 
-.property-name a:hover {
+.property-name a:hover,
+.property-name a:focus {
   text-decoration: underline;
 }
 
@@ -119,7 +125,9 @@ footer {
   margin: 0 auto;
 }
 
-.link-box {
+.link-box,
+.link-box:link,
+.link-box:visited {
   display: block;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -129,7 +137,8 @@ footer {
   color: #222;
 }
 
-.link-box:hover {
+.link-box:hover,
+.link-box:focus {
   background: #f6f6f6;
 }
 
@@ -138,12 +147,51 @@ footer {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 5px;
+  color: #222;
 }
 
 .link-description {
+  display: block;
   color: #555;
 }
 
 .home-footer {
   text-align: center;
+}
+
+
+/* Automatic language-routing pages */
+
+.redirect-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.redirect-page h1 {
+  margin-bottom: 10px;
+}
+
+.redirect-page .subtitle {
+  margin-bottom: 30px;
+}
+
+.languages {
+  margin-top: 25px;
+  font-size: 1.1rem;
+}
+
+.languages a,
+.languages a:link,
+.languages a:visited {
+  color: #333;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.languages a:hover,
+.languages a:focus {
+  color: #222;
+  text-decoration: underline;
 }
