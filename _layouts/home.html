@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ page.title }} | El Rincon</title>
+
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+
+<body class="home-page">
+
+  <div class="home-language">
+    {% include language-switcher.html %}
+  </div>
+
+  <header class="home-header">
+
+    <h1>EL RINCON</h1>
+
+    <p class="subtitle">
+      {{ page.location }}
+    </p>
+
+  </header>
+
+  <main>
+
+    {{ content }}
+
+  </main>
+
+  <footer class="home-footer">
+    El Rincon, {{ page.location }}
+  </footer>
+
+</body>
+</html>
